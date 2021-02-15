@@ -4,7 +4,12 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class Parser1_0 {
+/*
+    Легкий парсер курса валют с сайта https://finance.rambler.ru/currencies/
+    Create by sekarin 15.02.2021
+ */
+
+public class Parser_1_0_exchange_rate {
     public static void main(String[] args) throws IOException {
         Document page = GetPage();
 
@@ -46,6 +51,8 @@ public class Parser1_0 {
     }
 
     public static Document GetPage () throws IOException {
+
+        //сайт
         String url = "https://finance.rambler.ru/currencies/";
 
         Document page = Jsoup.connect(url).get();
